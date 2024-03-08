@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.main{
+    /* border: 2px solid white; */
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    background: url(crush2/1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.splash{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.splash img{
+    animation: anim 1s ease-in-out infinite alternate;
+}
+
+@keyframes anim {
+    0%{
+        scale: 0;
+    }
+    100%{
+        scale: 1;
+    }
+}
+.splash > h2{
+    position: absolute;
+    bottom: 15%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.main>h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    font-size: 10px;
+    bottom: 2%;
+    right: 50%;
+    transform: translate(50%,-50%);
+}
+.box{
+    padding: 0 3vw;
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    /* border: 2px solid red; */
+    bottom: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.part1{
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+    padding: 15px;
+    width: 30%;
+    /* border: 2px solid greenyellow; */
+}
+
+.part2{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+.part2 img{
+    width: 40px;
+}
+.part2 .img{
+    width: 30vw;
+    height: 200px;
+    border: 2px solid white;
+}
+.part2 .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+
+
+@media (max-width:1171px) {
+
+    .box{
+        height: 300px;
+        /* background-color: yellow; */
+    }
+    .main{
+        background-position: center;
+    }
+    .part2 .img {
+        width: 20vw;
+        height: 300px;
+
+    }
+}
+
+@media (max-width:767px) {
+    .part1{
+        width: 30%;
+    }
+    .part2 .img {
+        width: 30vw;
+        height: 200px;
+
+    }
+}
